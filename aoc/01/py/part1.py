@@ -1,6 +1,6 @@
-import pandas as pd 
+import pandas as pd
 
-depths = pd.read_csv("../input.txt", header = None).iloc[:,0]
+depths = pd.read_csv("../input.txt", header=None).iloc[:, 0]
 print(f"Number of measurements: {len(depths)}")
 
 diffs = depths.diff().dropna()

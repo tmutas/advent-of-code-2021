@@ -18,11 +18,13 @@ epsilon_list = [0 if i > 0 else 1 for i in counts]
 print(f"Gamma List: {gamma_list}")
 print(f"Epsilon List: {epsilon_list}")
 
-def binary_list_to_int(l):
+
+def binary_list_to_int(li):
     res = 0
-    for idx, val in enumerate(l[::-1]):
+    for idx, val in enumerate(li[::-1]):
         res += val*(2**idx)
     return res
+
 
 gamma = binary_list_to_int(gamma_list)
 epsilon = binary_list_to_int(epsilon_list)
@@ -31,4 +33,3 @@ print(f"Gamma: {gamma}")
 print(f"Epsilon: {epsilon}")
 
 print(f"Result: {gamma*epsilon}")
-
